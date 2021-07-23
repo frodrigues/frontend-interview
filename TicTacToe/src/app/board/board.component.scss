@@ -1,0 +1,48 @@
+.gameLayout{
+    display: flex;
+}
+.player1, .player2{
+    width:15rem;
+    margin-top:18rem;
+    @media (max-width: 600px) {
+         display: none;
+    }
+}
+.timer-game{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    .playerNumber{
+        font-size: 3rem;
+      }
+      .player1-xs, .player2-xs{
+        @media (min-width: 600px) {
+             display: none;
+        }
+    }
+    @media (max-width: 600px) {
+        justify-content: space-between;
+   }
+}
+main {
+    display: grid;
+    grid-template-columns: 15rem 15rem 15rem;
+    grid-gap: 0px;
+    @media (max-width: 600px) {
+        grid-gap: 12px;
+        grid-template-columns: 6rem 6rem 6rem;
+    }
+}
+  
+app-square {
+    border: 1px #fff solid;
+    background-color: #fff;
+    height: 15rem;
+    @media (max-width: 600px) {
+        height: 6rem;
+    }
+}
+.playerNumber{
+  font-size: 6rem;
+}

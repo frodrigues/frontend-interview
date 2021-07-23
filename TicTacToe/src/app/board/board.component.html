@@ -1,0 +1,29 @@
+<div class="gameLayout">
+    <div class="player1 title2 text-center">
+        <span class=" font-bold">Player 1</span>
+        <p class="mt-3 playerNumber">{{winsP1}}</p>
+    </div>
+    <div class="mainArea">
+
+        <main>
+            <app-square *ngFor="let val of squares; let i = index" [value]="val" (click)="makeMove(i)">
+
+            </app-square>
+        </main>
+    </div>
+    <div class="player2 title2 text-center">
+        <span class="font-bold">Player 2</span>
+        <p class="mt-3 playerNumber">{{winsP2}}</p>
+    </div>
+</div>
+<div class="text-center mt-5 mb-7 timer-game">
+    <div class="player1-xs title2 text-center">
+        <span class="font-bold">Player 1</span>
+        <p class="mt-3 playerNumber">{{winsP1}}</p>
+    </div>    
+<div class="title2">{{display}}</div>
+<div class="player2-xs title2 text-center">
+    <span class="font-bold">Player 2</span>
+    <p class="mt-3 playerNumber">{{winsP2}}</p>
+</div>
+</div>    

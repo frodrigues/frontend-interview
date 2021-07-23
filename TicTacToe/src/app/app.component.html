@@ -1,0 +1,157 @@
+<div>
+  <header>
+    <h1><a href="#"> <img class="logo" src="../assets/images/SWORD_Health_logo.svg"
+          alt="Amazing Game Sword Health" /></a></h1>
+    <div class="header_info">
+      <div class="font-bold">Frontend developer</div>
+      <div class="font-italic text-right">Challenge</div>
+
+    </div>
+  </header>
+  <main>
+    <!-- Main content -->
+
+    <section id="profile">
+      <div class="profile">
+        <div class="profile-photo">
+          <div class="circle">(Photo area)</div>
+
+        </div>
+        <div class="profile-personal">
+          <div class="title1">Frederico Rodrigues</div>
+          <div class="profile-personal-details">
+            <div>Age: 41</div>
+            <div>Location: Porto</div>
+            <div>Occupation: Frontend developer</div>
+          </div>
+
+        </div>
+        <div class="profile-about text-right">
+          <div>About me:</div>
+          I am an enthusiastic, self-motivated, reliable, responsible and hard working person. I am a mature team worker and adaptable to all challenging situations. I am able to work well under pressure and adhere to strict deadlines
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="game" id="game">
+      <h1 class="font-bold title2 text-center">Tic tac toe games</h1>
+      <p class="text-center mt-3 mb-3">Welcome to the best game in the world.</p>
+
+      <div class="btn-group mt-3 mb-3">
+        <button class="btn-active">Tic tac toe</button>
+        <button class="btn-inactive">4-in-a-row</button>
+      </div>
+      <div class="mt-5">
+        <app-board></app-board>
+      </div>
+
+    </section>
+    <section class="stats">
+      <h1 class="text-center title2 font-bold mt-7">Awesome statistics</h1>
+      <p class="text-center mt-3 mb-7">All statistics in on place!</p>
+
+      <div class="stats-detail mt-5">
+        <div class="text-center width-half">
+          <h2 class="title3 text-center font-bold">Game victories %</h2>
+
+          <div class="player-victories">
+            <div class="player-victory mt-5">
+              <h3 class="text-center title2 font-400">Player 1</h3>
+              <div class="mt-3">
+                <div class="inline-block">
+                 <div class="dot2 font-bold ">39%</div>
+                 <div>V</div>
+                 </div>
+                 <div class="inline-block">
+                   <div class="dot2 font-bold ">61%</div>
+                   <div>L</div>
+                   </div>
+               </div>
+            </div>
+       
+            <div class="player-victory mt-5">
+              <h3 class="text-center title2 font-400">Player 2</h3>
+              <div class="mt-3">
+               <div class="inline-block">
+                <div class="dot2 font-bold ">61%</div>
+                <div>V</div>
+                </div>
+                <div class="inline-block">
+                  <div class="dot2 font-bold ">39%</div>
+                  <div>L</div>
+                  </div>
+              </div>
+            </div>
+
+          </div>
+
+
+          
+        </div>
+        <div class="text-center width-half">
+          <h2 class="title3 font-bold matches-xs">Played matches</h2>
+
+          <div class="matches">
+         
+            <span class="dot" [ngClass]="{'dot-full': (i < 3)}" *ngFor="let val of matchesInfo; let i = index"></span>
+           
+          </div>
+          <h2 class="title3 font-bold">Game history</h2>
+
+          <div class="squares">
+            <div class="winner">P1</div>
+            <div class="winner">P2</div>
+            <div class="winner"></div>
+            <div class="winner"></div>
+            <div class="winner"></div>
+            <div class="winner"></div>
+            <div class="winner"></div>
+            <div class="winner"></div>
+            <div class="winner"></div>
+          </div>
+
+        </div>
+      </div>
+      <div>
+        <h2 class="title3 text-center font-bold mt-5">Total time</h2>
+        <div class="text-center mt-5 mb-7 title2">
+          00:00:00
+        </div>
+      </div>
+    </section>
+
+
+
+    <router-outlet></router-outlet>
+  </main>
+  <footer class="footer">
+     <div>
+      <p class="mb-3 mt-6">About page</p> 
+      <span class="footer-text mt-3">Play tic tac toe or 4-in-a-row anytime!<br/>
+      Created by @Frederico Rodrigues</span>
+     </div>
+     <div>
+      <p class="mb-3 mt-6">Contacts</p> 
+      <span class="footer-text mt-3"> +351) 123 456 789<br/>
+      Rua Sá da Bandeira, 111, Porto</span>
+
+     </div>
+     <div>
+      <p class="mb-3 mt-6">Stay in touch</p> 
+        <div class="social">
+            <img src="assets/images/facebook.svg"/>
+            <img src="assets/images/twitter.svg"/>
+            <img src="assets/images/instagram.svg"/>
+            
+        </div> 
+        <div class="InputAddOn mt-3">
+          <input placeholder="Subscribe our games" class="InputAddOn-field">
+          <button class="InputAddOn-item">
+            <img src="assets/images/send.svg"/>
+          </button>
+        </div>
+     </div>
+  </footer>
+</div>
