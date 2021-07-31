@@ -16,8 +16,8 @@ export class BoardComponent implements OnInit {
   display;
   matches;
   winners: string[] = [];
-  winsP1=0;
-  winsP2=0;
+  winsP1 = 0;
+  winsP2 = 0;
 
 
   constructor() { }
@@ -92,6 +92,22 @@ export class BoardComponent implements OnInit {
           this.newGame();
         }
       })
+    } else {
+      if (this.squares.filter(e => e === null).length === 0) {
+        Swal.fire({
+          title: 'It\'s a tie!',
+          text: "New game?",
+          icon: 'success',
+          showCancelButton: true,
+          confirmButtonColor: '#37a8ee',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Yes, please!'
+        }).then((result) => {
+          if (result.isConfirmed) {
+            this.newGame();
+          }
+        })
+      }
     }
   }
 
