@@ -110,13 +110,8 @@ game
                 width: inherit;
             }
         }
-        .player-victory:first-child {
-            
-          
-        }
-        .player-victory:last-child {
-          
-           
+        @media (max-width: 600px) {
+            justify-content: space-around;
         }
       
     }
@@ -187,6 +182,9 @@ game
         padding: 0px;
         justify-content: center;
         text-align: center;
+        align-content: center;
+        flex-direction: column;
+        align-items: center;
     }
     p {
         @media (max-width: 600px) {

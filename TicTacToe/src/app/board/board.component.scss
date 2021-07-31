@@ -1,29 +1,40 @@
-.gameLayout{
+.gameLayout {
     display: flex;
 }
-.player1, .player2{
-    width:15rem;
-    margin-top:18rem;
-    @media (max-width: 600px) {
-         display: none;
+.player1,
+.player2 {
+    width: 15rem;
+    margin-top: 18rem;
+    @media (max-width: 980px) {
+        display: none;
+    }
+    @media (min-width: 601px) and (max-width: 1280px) {
+        margin-top: 9rem;
     }
 }
-.timer-game{
+.timer-game {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
     justify-content: center;
-    .playerNumber{
+    .playerNumber {
         font-size: 3rem;
-      }
-      .player1-xs, .player2-xs{
-        @media (min-width: 600px) {
-             display: none;
+        @media (min-width: 601px) and (max-width: 1280px) {
+            font-size: 2rem;
+        }
+        @media (max-width: 600px) {
+            font-size: 1.5rem;
         }
     }
-    @media (max-width: 600px) {
+    .player1-xs,
+    .player2-xs {
+        @media (min-width: 980px) {
+            display: none;
+        }
+    }
+    @media (max-width: 980px) {
         justify-content: space-between;
-   }
+    }
 }
 main {
     display: grid;
@@ -33,8 +44,12 @@ main {
         grid-gap: 12px;
         grid-template-columns: 6rem 6rem 6rem;
     }
+    @media (min-width: 601px) and (max-width: 1280px) {
+        grid-gap: 12px;
+        grid-template-columns: 8rem 8rem 8rem;
+    }
 }
-  
+
 app-square {
     border: 1px #fff solid;
     background-color: #fff;
@@ -42,7 +57,13 @@ app-square {
     @media (max-width: 600px) {
         height: 6rem;
     }
+    @media (min-width: 601px) and (max-width: 1280px) {
+        height: 8rem;
+    }
 }
-.playerNumber{
-  font-size: 6rem;
+.playerNumber {
+    font-size: 6rem;
+    @media (min-width: 601px) and (max-width: 1280px) {
+        font-size: 3rem;
+    }
 }
