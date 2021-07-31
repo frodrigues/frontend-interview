@@ -59,7 +59,7 @@ export class BoardComponent implements OnInit {
 
   makeMove(idx: number) {
 
-    if (this.squares.indexOf('1') <= 0) {
+    if (this.squares.filter(e => e === null).length === 9) {
       this.startTimer();
     }
 
